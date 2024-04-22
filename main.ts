@@ -164,6 +164,23 @@ function song () {
     })
 }
 function Effects () {
+    EffectHealth = extraEffects.createCustomSpreadEffectData(
+    [
+    12,
+    12,
+    6,
+    6,
+    6,
+    8,
+    8,
+    7
+    ],
+    false,
+    extraEffects.createPresetSizeTable(ExtraEffectPresetShape.Twinkle),
+    extraEffects.createPercentageRange(90, 100),
+    extraEffects.createPercentageRange(5, 100),
+    extraEffects.createTimeRange(200, 400)
+    )
     EffectStatic = extraEffects.createCustomSpreadEffectData(
     [
     12,
@@ -3747,28 +3764,18 @@ sprites.onOverlap(SpriteKind.Enemy, SpriteKind.Pan, function (sprite, otherSprit
         sprite.setVelocity(randint(-10, 10), randint(-60, -70))
     }
     if (Throwing) {
-        if (Math.percentChance(70)) {
+        if (Math.percentChance(40)) {
             life = sprites.create(img`
-                . . c c c c . . . c c c c . . . 
-                . . c c c c . . . c c c c . . . 
-                c c 7 7 7 7 c c c 7 7 7 7 c c . 
-                c c 7 7 7 7 c c c 7 7 7 7 c c . 
-                c c 7 7 8 6 7 7 7 6 8 7 7 c c . 
-                c c 7 7 6 6 7 7 7 6 6 7 7 c c . 
-                c c 7 7 6 6 7 7 7 6 6 7 7 c c . 
-                c c 7 7 8 6 6 6 6 6 8 7 7 c c . 
-                c c 7 7 8 8 6 6 6 8 8 7 7 c c . 
-                . . c c 7 7 6 6 6 7 7 c c . . . 
-                8 . c c 7 7 6 6 6 7 7 c c . 8 . 
-                8 . c c 7 7 8 6 8 7 7 c c . 8 . 
-                8 . . . c c 7 7 7 c c . . . 8 . 
-                8 8 8 . c c 7 7 7 c c . 8 8 8 . 
-                . . 8 . . . c c c . . . 8 . . . 
-                . . . . . . c c c . . . . . . . 
+                . c c . c c . 
+                c 7 7 c 7 7 c 
+                c 7 6 7 6 7 c 
+                c 7 8 6 8 7 c 
+                . c 7 6 7 c . 
+                . . c 7 c . . 
+                . . . c . . . 
                 `, SpriteKind.Food)
             life.setPosition(sprite.x, sprite.y)
-            life.startEffect(effects.halo)
-            life.setScale(0.5, ScaleAnchor.Middle)
+            extraEffects.createSpreadEffectOnAnchor(life, EffectHealth, -1, 14, 50)
         }
         sprites.destroy(sprite, effects.disintegrate, 500)
         music.play(music.melodyPlayable(music.smallCrash), music.PlaybackMode.UntilDone)
@@ -3783,7 +3790,12 @@ function DRIFT_CITY () {
     }
 }
 function mainstuff () {
-    maplist = [tileUtil.createSmallMap(tilemap`level23`), tileUtil.createSmallMap(tilemap`level26`), tileUtil.createSmallMap(tilemap`level27`)]
+    maplist = [
+    tileUtil.createSmallMap(tilemap`level23`),
+    tileUtil.createSmallMap(tilemap`level26`),
+    tileUtil.createSmallMap(tilemap`level28`),
+    tileUtil.createSmallMap(tilemap`level27`)
+    ]
     profilelife.setProfileImage(img`
         . . . . . . . . . . . . . . . . 
         . . . . . . . . . . . . . . . . 
@@ -3899,7 +3911,7 @@ function mainstuff () {
     textSprite = textsprite.create("Time left" + timeb4rng, 0, 1)
     textSprite.setOutline(1, 5)
     textSprite.setFlag(SpriteFlag.RelativeToCamera, true)
-    textSprite.setPosition(33, 112)
+    textSprite.setPosition(35, 112)
 }
 sprites.onOverlap(SpriteKind.Player, SpriteKind.Food, function (sprite, otherSprite) {
     sprites.destroy(otherSprite, effects.warmRadial, 500)
@@ -4608,6 +4620,7 @@ let EffectTeleportGold: SpreadEffectData = null
 let EffectStaticGold: SpreadEffectData = null
 let EffectTeleport: SpreadEffectData = null
 let EffectStatic: SpreadEffectData = null
+let EffectHealth: SpreadEffectData = null
 let whatblessing2 = 0
 let youhavebeenblessedwith: Sprite = null
 let blessing = 0
