@@ -1,0 +1,62 @@
+{
+    "name": "still havent decided on a name yet...",
+    "description": "",
+    "dependencies": {
+        "device": "*",
+        "arcade-character-animations": "github:microsoft/arcade-character-animations#v0.0.2",
+        "Extra Effects": "github:alexszeto/extra-effects#v3.1.0",
+        "Timers": "github:microsoft/arcade-timers#v1.1.0",
+        "arcade-sprite-util": "github:jwunderl/arcade-sprite-util#df4991a9793a0fff092225a67d0a81936b75d7e1",
+        "arcade-sprite-data": "github:microsoft/arcade-sprite-data#v0.2.1",
+        "controller": "*",
+        "darts": "*",
+        "Color Fading": "github:jwunderl/pxt-color#v0.2.3",
+        "pxt-scaling": "github:jwunderl/pxt-scaling#v0.1.0",
+        "arcade-premium-life": "github:jwunderl/arcade-premium-life#v0.2.1",
+        "arcade-text": "github:microsoft/arcade-text#v1.3.0",
+        "arcade-tile-util": "github:microsoft/arcade-tile-util#v1.2.0"
+    },
+    "files": [
+        "main.blocks",
+        "main.ts",
+        "README.md",
+        "assets.json",
+        "images.g.jres",
+        "images.g.ts",
+        "tilemap.g.jres",
+        "tilemap.g.ts"
+    ],
+    "testFiles": [
+        "test.ts"
+    ],
+    "targetVersions": {
+        "branch": "v1.12.46",
+        "tag": "v1.12.46",
+        "commits": "https://github.com/microsoft/pxt-arcade/commits/e66fb08db35df2249cd64300195259c64d497106",
+        "target": "1.12.51",
+        "pxt": "8.5.57",
+        "targetId": "arcade"
+    },
+    "supportedTargets": [
+        "arcade"
+    ],
+    "preferredEditor": "blocksprj",
+    "palette": [
+        "#000000",
+        "#160D13",
+        "#31293E",
+        "#4D6660",
+        "#95B666",
+        "#EF9E4E",
+        "#AD4030",
+        "#56212A",
+        "#904B41",
+        "#A69998",
+        "#5F575E",
+        "#8EB89E",
+        "#F6F2C3",
+        "#E79B7C",
+        "#9B4C63",
+        "#432142"
+    ]
+}
