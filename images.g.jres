@@ -9,11 +9,6 @@
         "mimeType": "image/x-mkcd-f4",
         "displayName": "Pan"
     },
-    "image4": {
-        "data": "hwQQABAAAAAAAAAAAAAAAAAAMwMAAAAAADBEJAIAAAAAQ0Q0IwAAAABDzMwz0t0AAEJERMzMwg0gI0JEM8Ms3CBDJCI0zMzcIDMiRMPMLNwAIkREPMzCDQBDxMwz0t0AAENENCMAAAAAMzMiAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-        "mimeType": "image/x-mkcd-f4",
-        "displayName": "BokChoy"
-    },
     "image5": {
         "data": "hwQQABAAAAAAAAAAAAAAAAAAMyIAAAAAADBEQwIAAAAAQzQkEgAAADBCREIjIQMAMEI0JDLDNABDJCMiIUNMA0NEIhEzREQDQzQkM0NETANDQzIiEcNEAyA0JBIzIzIAMCJCIjECAAAAQzQkIgAAAAAjRCMAAAAAADAjAgAAAAAAAAAAAAAAAA==",
         "mimeType": "image/x-mkcd-f4",
@@ -48,6 +43,11 @@
         "data": "hwQLAAsAAAAAAAAAzAwAAAAAAMBlDAAAAMDMXGwMAAAAXGbFxgAAAMDFXGYMAAAAXGxmZQwAAABcbGZlDAAAAFxsZmUMAAAAwMVVxgAAAAAAXGUMAAAAAADAzAAAAAAA",
         "mimeType": "image/x-mkcd-f4",
         "displayName": "GoldPanrotated"
+    },
+    "image4": {
+        "data": "hwQQABAAAAAAAAAAAAAAAAAAMwMAAAAAADBEJAIAAAAAQ0Q0IwAAAABDzMwz0t0AAEJEREzEwg0gI0JEM8Ms3CBDJCI0zMzcIDMiREPMLNwAIkREPMzCDQBDxMwz0t0AAENENCMAAAAAMzMiAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+        "mimeType": "image/x-mkcd-f4",
+        "displayName": "BokChoy"
     },
     "*": {
         "mimeType": "image/x-mkcd-f4",
